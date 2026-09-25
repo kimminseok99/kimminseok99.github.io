@@ -39,7 +39,7 @@
 <section class="policy-section">
 <h2>1. 처리하는 개인정보와 수집 방법</h2>
 <h3>플랫폼 및 버전별 적용 범위</h3>
-<p>iPhone용 App Store 버전 1.0.0은 광고와 인앱 구입 기능이 비활성화되어 있습니다. 이 버전은 광고 SDK를 초기화하거나 광고를 요청하지 않으며, 광고 제거 구입 및 구입 복원 기능도 제공하지 않습니다. 아래 Google Mobile Ads와 Google Play 결제 설명은 해당 기능이 활성화된 Android용 Google Play 버전에 적용됩니다. 질문 제출·신고, 서버 접속 로그, 기기 내 저장 및 이미지 저장에 관한 설명은 iOS 버전에도 적용됩니다.</p>
+<p>iPhone용 App Store 버전 1.0.0은 Google Mobile Ads를 통한 배너·전면·보상형 광고를 제공합니다. 광고 요청에는 비개인화 광고 옵션을 사용하며, 앱은 iOS 광고 식별자(IDFA)에 접근하기 위한 앱 추적 허용을 요청하지 않습니다. iOS 광고 제거 구입 및 구입 복원은 비활성화되어 있습니다. 아래 Google Play 결제 설명은 해당 기능이 활성화된 Android용 Google Play 버전에만 적용됩니다. 질문 제출·신고, 서버 접속 로그, 기기 내 저장 및 이미지 저장에 관한 설명은 두 플랫폼에 적용됩니다.</p>
 <p>앱은 회원가입 또는 로그인 기능을 제공하지 않으며, 이름, 이메일 주소, 전화번호 같은 회원정보를 직접 요구하지 않습니다. 다만 이용자가 선택 기능인 질문 제출 또는 신고 기능을 사용하는 경우 아래 정보가 처리됩니다.</p>
 <h3>질문을 제출할 때</h3>
 <ul>
@@ -63,10 +63,10 @@
 <ul>
 <li>IP 주소와 이를 통해 추정되는 대략적인 위치</li>
 <li>앱 실행, 광고 탭·동영상 조회 등 앱 및 광고 상호작용</li>
-<li>앱 실행 시간, 중단률, 에너지 사용량 등 진단 정보</li>
-<li>Android 광고 ID, 앱 세트 ID와 기기 또는 계정 관련 식별자</li>
+<li>충돌 로그, 앱 실행 시간, 중단률, 에너지 사용량 등 진단·실적 정보</li>
+<li>앱 또는 개발자 범위의 기기 식별자. Android에서는 광고 ID와 앱 세트 ID도 포함될 수 있습니다. iOS 빌드는 IDFA 접근 권한을 요청하지 않습니다.</li>
 </ul>
-<p>광고가 활성화된 Android용 Google Play 빌드에는 Google Mobile Ads SDK가 포함되어 있습니다. 이 SDK는 광고 제공, 광고 성과 분석과 부정 이용 방지를 위해 위 정보를 자동으로 수집하여 Google과 광고 파트너에게 전송할 수 있으며, 전송 구간은 TLS로 암호화됩니다.</p>
+<p>광고가 활성화된 iOS App Store 및 Android Google Play 빌드에는 Google Mobile Ads SDK가 포함되어 있습니다. 이 SDK는 광고 제공, 광고 성과 분석과 부정 이용 방지를 위해 위 정보를 Google과 광고 파트너에게 전송할 수 있으며, 전송 구간은 TLS로 암호화됩니다. 비개인화 광고도 광고 제공과 측정에 필요한 정보를 처리할 수 있습니다.</p>
 <h3>Google Play 인앱 결제</h3>
 <p>광고 제거권을 구매하거나 구매 복원 기능을 사용하면 Google Play가 결제 계정과 결제수단을 처리합니다. 앱은 상품 ID, 구매 상태와 거래 식별자를 Google Play Billing을 통해 확인하여 광고 제거 권한을 적용하며, 결제수단 정보나 구매 토큰을 앱의 로컬 저장소 또는 개발자 서버에 저장하지 않습니다.</p>
 <h3>기기에만 저장되는 정보</h3>
@@ -94,7 +94,7 @@
 <h2>3. 처리 근거와 선택 기능 이용 거부</h2>
 <p>질문 제출과 신고에 필요한 정보는 이용자가 요청한 기능을 제공하고 부정 이용을 방지하기 위해 처리합니다(「개인정보 보호법」 제15조 제1항 제4호 및 제6호).</p>
 <p>이용자는 질문 제출, 신고 또는 사진 저장 기능을 사용하지 않을 수 있습니다. 이 경우 해당 선택 기능만 제한되며, 기본 게임 플레이는 계속 이용할 수 있습니다.</p>
-<p>광고 ID는 Android 설정에서 재설정하거나 삭제할 수 있으며, 광고 개인정보 보호 설정에서 맞춤형 광고 사용을 제한할 수 있습니다. 법령상 별도 동의가 필요한 지역에서는 광고 정보 처리 전에 동의를 받습니다.</p>
+<p>iOS 빌드는 비개인화 광고를 요청하고 앱 추적 허용을 요청하지 않습니다. Android 광고 ID는 운영체제 설정에서 재설정하거나 삭제할 수 있습니다. 광고 데이터 처리에 관한 권리 행사 또는 문의는 아래 개인정보 보호 연락처와 Google 개인정보처리방침의 안내를 이용할 수 있습니다.</p>
 </section>
 <section class="policy-section">
 <h2>4. 개인정보의 보유기간과 파기</h2>
@@ -119,6 +119,7 @@
 <ul class="link-list">
 <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 개인정보처리방침<span aria-hidden="true">↗</span></a></li>
 <li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener noreferrer">Google Mobile Ads SDK 데이터 공개 안내<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://developers.google.com/admob/ios/privacy/data-disclosure" target="_blank" rel="noopener noreferrer">Google Mobile Ads iOS 데이터 공개 안내<span aria-hidden="true">↗</span></a></li>
 </ul>
 </section>
 <section class="policy-section">
@@ -159,8 +160,8 @@
 </section>
 <section class="policy-section">
 <h2>10. 광고 및 분석 도구</h2>
-<p>Android용 Google Play 빌드는 성향 분석 화면에서 배너 광고를, 랜덤·카테고리 질문을 새로 5개 완료하고 직전 전면 광고 노출로부터 최소 5분이 지난 시점에 전면 광고를 요청할 수 있습니다. 성향 재검사 시에는 사용자가 명시적으로 선택한 경우에만 리워드 광고를 요청합니다. 광고 제거권이 적용된 동안에는 광고를 요청하지 않습니다. 광고 요청은 비개인화 광고 옵션을 사용하지만, Google Mobile Ads SDK는 제1조에 기재한 정보를 광고 제공, 성과 측정과 부정 이용 방지를 위해 처리할 수 있습니다.</p>
-<p>실제 광고 단위 활성화, 맞춤형 광고 설정 또는 Firebase Analytics 같은 다른 분석 SDK 추가로 처리 내용이 바뀌는 경우 수집 항목, 목적, 제공업체, 보유기간과 거부 방법을 먼저 변경하고 필요한 동의를 받겠습니다.</p>
+<p>광고가 활성화된 iOS App Store 및 Android Google Play 빌드는 성향 분석 화면에서 배너 광고를, 랜덤·카테고리 질문을 새로 5개 완료하고 직전 전면 광고 노출로부터 최소 5분이 지난 시점에 전면 광고를 요청할 수 있습니다. 성향 재검사 시에는 사용자가 명시적으로 선택한 경우에만 리워드 광고를 요청합니다. 광고 제거권이 제공되는 Android에서 해당 권한이 적용된 동안에는 광고를 요청하지 않습니다. iOS 1.0.0에서는 광고 제거 구입을 제공하지 않습니다. 광고 요청은 비개인화 광고 옵션을 사용하지만, Google Mobile Ads SDK는 제1조에 기재한 정보를 광고 제공, 성과 측정과 부정 이용 방지를 위해 처리할 수 있습니다.</p>
+<p>맞춤형 광고 설정 또는 추가 분석 SDK 도입으로 처리 내용이 바뀌는 경우 개인정보처리방침을 갱신하고 필요한 동의 절차를 적용합니다.</p>
 </section>
 <section class="policy-section">
 <h2>11. 개인정보 침해에 대한 구제</h2>
@@ -192,7 +193,7 @@
     </aside>
 
     <footer>
-      <p>최종 변경일 2026년 9월 25일</p>
+      <p>최종 변경일 2026년 9월 26일</p>
       <p>© 2026 김민석</p>
     </footer>
   </main>
